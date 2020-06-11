@@ -1,6 +1,12 @@
 # / Sekai Connection /
 
-An experiment of conencting blogrolls.
+An experiment of connecting blogrolls.
+
+## Dependency
+
+- [Python 3](https://www.python.org): Python is used for generating DOT file.
+- [PyYAML](https://pyyaml.org): Read YAML files under `data/`.
+- [Graphviz](https://graphviz.org): For drawing graph.
 
 ## Building
 
@@ -8,7 +14,7 @@ Type `make`. this will generate `output.svg` which you can open in the browser.
 
 ## Writing YAML
 
-Place a YAML file like this:
+Place a YAML file in `data/` like this:
 
 ```
 # 你的显示名
