@@ -1,0 +1,11 @@
+# 你的显示名
+name: 依云
+# 你的用户名（ASCII Only 时）
+nick: lilydjwg
+# 你的网站或博客（网站优先）
+site: https://blog.lilydjwg.me
+# 你的博客友链，是个列表，列表里面是友链对象的 ASCII Only Nick
+links:
+  # 像这样一行一项
+  - felixonmars
+  - Ken_Ookami_Horo
