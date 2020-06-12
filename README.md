@@ -31,3 +31,7 @@ links:
 ```
 
 and it will be used for generating graphs.
+
+## Chat
+
+`#archlinux-cn-offtopic` @ Freenode
