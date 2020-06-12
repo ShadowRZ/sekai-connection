@@ -36,7 +36,7 @@ def gen_defs(files):
         color = 'pink'
         if 'color' in m:
             color = m['color']
-        g.node(node_id, label=f'<<b>{name}</b><br/>{site}>', URL=site, color=color)
+        g.node(node_id, label=f'<<b>{name}</b><br/>{site}>', URL=site, color=color, tooltip=f'{name} - {site}')
         for i in links:
             if get_netloc(i) in d:
                 g.edge(node_id, get_id(i))
