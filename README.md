@@ -7,6 +7,7 @@ An experiment of connecting blogrolls.
 - [Python 3](https://www.python.org): Python is used for generating DOT file.
 - [PyYAML](https://pyyaml.org): Read YAML files under `data/`.
 - [Graphviz](https://graphviz.org): For drawing graph.
+- [Python Graphviz binding](https://graphviz.readthedocs.io): Generate DOT file.
 
 ## Building
 
@@ -21,12 +22,12 @@ Place a YAML file in `data/` like this:
 name:
 # 你的用户名（ASCII Only 时）
 nick: user
-# 你的网站或博客（网站优先）
+# 你的网站或博客
 site:
-# 你的博客友链，是个列表，列表里面是友链对象的 ASCII Only Nick
+# 你的博客友链，是个列表，列表里面是友链对象的网站
 links:
   # 像这样一行一项
-  - another_user
+  - https://example.com
 ```
 
 and it will be used for generating graphs.

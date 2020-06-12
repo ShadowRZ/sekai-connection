@@ -2,18 +2,21 @@
 name: 谷月轩
 # 你的用户名（ASCII Only 时）
 nick: SilverRainZ
-# 你的网站或博客（网站优先）
+# 你的网站或博客
 site: https://silverrainz.me
-# 你的博客友链，是个列表，列表里面是友链对象的 ASCII Only Nick
+# 你的博客友链，是个列表，列表里面是友链对象的网站
 links:
   # 像这样一行一项
-  - lilydjwg
-  - quininer
-  - RicterZ
-  - LQYMGY
-  - farseerfc
-  - Onlis
-  - Ken_Ookami_Horo
-  - frantic1048
-  - VOID001
-  - Beval
+  - http://xiashang.sinaapp.com/
+  - http://fleurer-lee.com/
+  - https://blog.lilydjwg.me/
+  - https://quininer.github.io/
+  - http://ricterz.me/
+  - http://octobug.tk/
+  - https://lqymgt.github.io/
+  - http://farseerfc.me/
+  - http://metasploit.lofter.com/
+  - https://blog.yoitsu.moe/
+  - https://frantic1048.com/
+  - https://void-shana.moe/
+  - http://beval.xyz/

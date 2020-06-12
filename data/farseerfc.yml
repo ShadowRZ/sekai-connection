@@ -2,40 +2,41 @@
 name: farseerfc
 # 你的用户名（ASCII Only 时）
 nick: farseerfc
-# 你的网站或博客（网站优先）
+# 你的网站或博客
 site: https://farseerfc.me
-# 你的博客友链，是个列表，列表里面是友链对象的 ASCII Only Nick
+# 你的博客友链，是个列表，列表里面是友链对象的网站
 links:
   # 像这样一行一项
-  - lilydjwg
-  - felixonmars
-  - phoenixlzx
-  - fixme
-  - LQYMGT
-  - quininer
-  - acgtyrant
-  - mazk
-  - wicast
-  - SilverRainZ
-  - Ken_Ookami_Horo
-  - frantic1048
-  - PeterCxy
-  - csslayer
-  - VOID001
-  - PoiScript
-  - nanpuyue
-  - Xuanwo
-  - ArielAxionL
-  - Amane_Tobiichi
-  - awing
-  - AlynxZhou
-  - OriginCode
-  - noirgif
-  - MarvelousBlack
-  - tioover
-  - Kiri
-  - SaltedFish
-  - geneLocated
-  - szclsya
-  - iovxw
-  - justforlxz
+  - https://blog.lilydjwg.me/
+  - https://blog.felixc.at/
+  - https://blog.phoenixlzx.com/
+  - https://fbq.github.io/
+  - https://lqymgt.github.io/
+  - https://quininer.github.io/
+  - http://acgtyrant.com/
+  - https://przhu.github.io/
+  - https://mazk.github.io/
+  - http://tnt.wicast.tk/
+  - https://silverrainz.me/
+  - https://blog.yoitsu.moe/
+  - https://frantic1048.com/
+  - https://typeblog.net/
+  - https://www.csslayer.info/wordpress/
+  - https://void-shana.moe/
+  - https://blog.poi.cat/
+  - https://blog.nanpuyue.com/
+  - https://xuanwo.io/
+  - https://axionl.me/
+  - https://amane.live/
+  - https://a-wing.top/
+  - https://sh.alynx.one/
+  - https://originco.de/
+  - https://nir.moe/
+  - https://blog.megumifox.com/
+  - https://ioover.net/
+  - https://kirikira.moe/
+  - https://v2bv.net/
+  - https://melty.land/
+  - https://szclsya.me/
+  - https://iovxw.net/
+  - https://blog.justforlxz.com/
