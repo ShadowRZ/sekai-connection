@@ -7,9 +7,8 @@ site: https://blog.lilydjwg.me
 # 你的博客友链，是个列表，列表里面是友链对象的网站
 links:
   # 像这样一行一项
+  - https://farseerfc.me/
   - https://blog.felixc.at/
   - https://tumutanzi.com/
   - https://blog.yoitsu.moe/
-  - http://www.geekonomics10000.com/
-  - https://linuxtoy.org/
-  - http://vimer.me/
+  - https://fiveyellowmice.com/
