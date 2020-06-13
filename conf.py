@@ -1,6 +1,6 @@
 GRAPH_NODE_ATTRS = {
         'fontname': '等距更纱黑体 Slab SC',
-        'fontsize': '20.0',
+        'fontsize': '27.0',
         'shape': 'doublecircle',
         'color': 'yellow',
 }

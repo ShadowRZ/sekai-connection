@@ -10,7 +10,7 @@ from conf import GRAPH_EDGE_ATTRS, GRAPH_NODE_ATTRS, GRAPH_GRAPH_ATTRS
 
 def get_id(site):
     location = get_netloc(site)
-    if location == 'about.me':
+    if location in {'about.me', 'home.ustc.edu.cn'}:
         return str(uuid.uuid5(uuid.NAMESPACE_URL, site))
     return str(uuid.uuid5(uuid.NAMESPACE_DNS, get_netloc(site)))
 
@@ -36,7 +36,7 @@ def gen_defs(files):
     d = get_dict(files)
     g = graphviz.Digraph(
             '/ Sekai Connection /',
-            engine='circo',
+            engine='neato',
             node_attr=GRAPH_NODE_ATTRS,
             edge_attr=GRAPH_EDGE_ATTRS,
             graph_attr=GRAPH_GRAPH_ATTRS

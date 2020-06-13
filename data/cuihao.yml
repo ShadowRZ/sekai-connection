@@ -1,0 +1,17 @@
+# 你的显示名
+name: Cui Hao
+# 你的用户名（ASCII Only 时）
+nick: cuihao
+# 你的网站或博客
+site: https://i-yu.me/
+# 你的博客友链，是个列表，列表里面是友链对象的网站
+links:
+  # 像这样一行一项
+  - https://zhsj.me/
+  - https://hosiet.me/
+  - https://jenny42.com/
+  - https://blog.felixc.at/
+  - https://blog.yoitsu.moe/
+  - https://www.nicho1as.wang/
+  - http://home.ustc.edu.cn/~chenkj/
+  - http://home.ustc.edu.cn/~zh2991/
