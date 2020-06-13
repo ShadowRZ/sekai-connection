@@ -1,0 +1,33 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      name: Checkout
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install graphviz
+        python3 -m venv env
+        ./env/bin/pip install -U graphviz
+    - name: Build
+      run: |
+        make PYTHON3=./env/bin/python3 svg
+        make PYTHON3=./env/bin/python3 png
+        make PYTHON3=./env/bin/python3 jpeg
+        make PYTHON3=./env/bin/python3 pdf
+    - name: Upload
+      uses: ncipollo/release-action@v1.6.1
+      with:
+        allowUpdates: true
+        tag: "Output"
+        artifacts: "./sekai-connection.gv.*"
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+# vim:ts=2:sw=2:et
