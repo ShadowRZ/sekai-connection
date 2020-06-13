@@ -15,7 +15,12 @@ jobs:
         sudo apt-get update
         sudo apt-get install graphviz python3-venv
         python3 -m venv env
-        ./env/bin/pip install -U graphviz
+        ./env/bin/pip install -U graphviz pyyaml
+    - name: Check dependencies
+      run: |
+        dot -V
+        ./env/bin/python3 -c 'import yaml'
+        ./env/bin/python3 -c 'import graphviz'
     - name: Build
       run: |
         make PYTHON3=./env/bin/python3 svg
