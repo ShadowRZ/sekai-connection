@@ -11,7 +11,7 @@ An experiment of connecting blogrolls.
 
 ## Building
 
-Type `make`. this will generate `output.svg` which you can open in the browser.
+Type `make`. this will generate `sekai-connection.gv.svg` which you can open in the browser.
 
 ## Writing YAML
 

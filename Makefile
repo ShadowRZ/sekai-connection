@@ -1,19 +1,27 @@
 # -*- Makefile -*-
 
-# Layouter.
-LAYOUTER = neato
+# Python.
+PYTHON3 = python3
 
-# Arguments to layouter.
-GVFLAGS = -Nshape=doublecircle -Ncolor=yellow -Goverlap=false
+svg: sekai-connection.svg
+png: sekai-connection.png
+jpeg: sekai-connection.jpeg
+pdf: sekai-connection.pdf
 
-svg: output.svg
+sekai-connection.svg: $(wildcard data/*.yml)
+	@echo '  GENERATE.PY	sekai-connection.svg'
+	@$(PYTHON3) generate.py svg $^
 
-output.gv: $(wildcard data/*.yml)
-	@echo '  GENERATE.PY	output.gv'
-	@python3 ./generate.py $^ > $@
+sekai-connection.png: $(wildcard data/*.yml)
+	@echo '  GENERATE.PY	sekai-connection.png'
+	@$(PYTHON3) generate.py png $^
 
-output.svg: output.gv
-	@echo '  NEATO	output.svg'
-	@$(LAYOUTER) $(GVFLAGS) $< -Tsvg > $@
+sekai-connection.jpeg: $(wildcard data/*.yml)
+	@echo '  GENERATE.PY	sekai-connection.jpeg'
+	@$(PYTHON3) generate.py jpeg $^
 
-.PHONY: svg
+sekai-connection.pdf: $(wildcard data/*.yml)
+	@echo '  GENERATE.PY	sekai-connection.pdf'
+	@$(PYTHON3) generate.py pdf $^
+
+.PHONY: svg png jpeg pdf
