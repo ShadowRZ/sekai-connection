@@ -5,5 +5,6 @@ nick: SherlockHolo
 # 你的网站或博客
 site: https://sherlock-holo.github.io
 color: red
+fontcolor: red
 # 你的博客友链，是个列表，列表里面是友链对象的网站
 links:

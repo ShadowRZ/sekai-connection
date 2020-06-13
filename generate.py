@@ -3,6 +3,7 @@ import yaml
 import sys
 import uuid
 import graphviz
+import hashlib
 from urllib.parse import urlparse
 
 from conf import GRAPH_EDGE_ATTRS, GRAPH_NODE_ATTRS, GRAPH_GRAPH_ATTRS
@@ -15,6 +16,11 @@ def get_id(site):
 
 def get_netloc(site):
     return urlparse(site).netloc
+
+def get_color(site):
+    loc = get_netloc(site)
+    h = hashlib.md5(loc.encode('utf-8'))
+    return f'#{h.hexdigest()[0:6]}'
 
 def get_dict(files):
     ret = {}
@@ -41,13 +47,16 @@ def gen_defs(files):
         links = m['links'] or []
         site = m['site'] or ''
         node_id = get_id(site)
-        color = 'pink'
+        color = get_color(site)
+        fontcolor = 'black'
         if 'color' in m:
             color = m['color']
-        g.node(node_id, label=f'<<b>{name}</b><br/>{site}>', URL=site, color=color, tooltip=f'{name} - {site}')
+        if 'fontcolor' in m:
+            fontcolor = m['fontcolor']
+        g.node(node_id, label=f'<<b>{name}</b><br/>{site}>', URL=site, color=color, tooltip=f'{name} - {site}', fontcolor=fontcolor)
         for i in links:
             if get_netloc(i) in d:
-                g.edge(node_id, get_id(i))
+                g.edge(node_id, get_id(i), color=color)
             else:
                 sys.stderr.write(f'// !! WARNING: No node of {i} found. (from {site} of {nick})\n')
     return g
