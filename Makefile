@@ -31,4 +31,8 @@ sekai-connection.gv.pdf: sekai-connection.gv
 	@echo '  DOT	sekai-connection.gv.pdf'
 	@dot -K$(LAYOUTER) -Tpdf $< -o$@
 
-.PHONY: svg png jpeg pdf
+# Preview
+x11-preview: sekai-connection.gv
+	@dot -K$(LAYOUTER) -Tx11 $<
+
+.PHONY: svg png jpeg pdf x11-preview
