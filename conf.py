@@ -3,6 +3,7 @@ GRAPH_NODE_ATTRS = {
         'fontsize': '27.0',
         'shape': 'doublecircle',
         'color': 'yellow',
+        'root': '990949be-4f70-5827-a9fa-529383c12603'
 }
 
 GRAPH_EDGE_ATTRS = {}
