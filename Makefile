@@ -3,25 +3,32 @@
 # Python.
 PYTHON3 = python3
 
-svg: sekai-connection.svg
-png: sekai-connection.png
-jpeg: sekai-connection.jpeg
-pdf: sekai-connection.pdf
+# Graph layouter.
+LAYOUTER = neato
 
-sekai-connection.svg: $(wildcard data/*.yml)
-	@echo '  GENERATE.PY	sekai-connection.gv.svg'
-	@$(PYTHON3) generate.py svg $^
+svg: sekai-connection.gv.svg
+png: sekai-connection.gv.png
+jpeg: sekai-connection.gv.jpeg
+pdf: sekai-connection.gv.pdf
 
-sekai-connection.png: $(wildcard data/*.yml)
-	@echo '  GENERATE.PY	sekai-connection.gv.png'
-	@$(PYTHON3) generate.py png $^
+sekai-connection.gv: $(wildcard data/*.yml)
+	@echo '  GENERATE.PY	sekai-connection.gv'
+	@$(PYTHON3) generate.py $^
 
-sekai-connection.jpeg: $(wildcard data/*.yml)
-	@echo '  GENERATE.PY	sekai-connection.gv.jpeg'
-	@$(PYTHON3) generate.py jpeg $^
+sekai-connection.gv.svg: sekai-connection.gv
+	@echo '  DOT	sekai-connection.gv.svg'
+	@dot -K$(LAYOUTER) -Tsvg $< -o$@
 
-sekai-connection.pdf: $(wildcard data/*.yml)
-	@echo '  GENERATE.PY	sekai-connection.gv.pdf'
-	@$(PYTHON3) generate.py pdf $^
+sekai-connection.gv.png: sekai-connection.gv
+	@echo '  DOT	sekai-connection.gv.png'
+	@dot -K$(LAYOUTER) -Tpng $< -o$@
+
+sekai-connection.gv.jpeg: sekai-connection.gv
+	@echo '  DOT	sekai-connection.gv.jpeg'
+	@dot -K$(LAYOUTER) -Tjpg $< -o$@
+
+sekai-connection.gv.pdf: sekai-connection.gv
+	@echo '  DOT	sekai-connection.gv.pdf'
+	@dot -K$(LAYOUTER) -Tpdf $< -o$@
 
 .PHONY: svg png jpeg pdf

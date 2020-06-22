@@ -36,7 +36,6 @@ def gen_defs(files):
     d = get_dict(files)
     g = graphviz.Digraph(
             '/ Sekai Connection /',
-            engine='neato',
             node_attr=GRAPH_NODE_ATTRS,
             edge_attr=GRAPH_EDGE_ATTRS,
             graph_attr=GRAPH_GRAPH_ATTRS
@@ -62,6 +61,5 @@ def gen_defs(files):
     return g
 
 if __name__ == '__main__':
-    fmt = sys.argv[1]
-    g = gen_defs(sys.argv[2:])
-    g.render(filename='sekai-connection.gv', format=fmt)
+    g = gen_defs(sys.argv[1:])
+    g.save(filename='sekai-connection.gv')
