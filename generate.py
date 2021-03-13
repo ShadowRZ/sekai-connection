@@ -60,6 +60,24 @@ def gen_defs(files):
                 sys.stderr.write(f'// !! WARNING: No node of {i} found. (from {site} of {nick})\n')
     return g
 
+def find_missing():
+    import glob
+    d = get_dict(glob.glob('data/*.yml'))
+    count = 0
+    print(f"Nodes: {len(d)}\n")
+    for k, m in d.items():
+        nick = m['nick'] or f
+        name = m['name'] or '(?????)'
+        links = m['links'] or []
+        site = m['site'] or ''
+        node_id = get_id(site)
+        print(f"## {name} - {site} ->")
+        for i in links:
+            if get_netloc(i) not in d:
+                print(f'   Missing: {i}')
+                count += 1
+    print(f"\nTotal missing: {count}")
+
 if __name__ == '__main__':
     g = gen_defs(sys.argv[1:])
     g.save(filename='sekai-connection.gv')

@@ -35,4 +35,7 @@ sekai-connection.gv.pdf: sekai-connection.gv
 x11-preview: sekai-connection.gv
 	@dot -K$(LAYOUTER) -Tx11 $<
 
-.PHONY: svg png jpeg pdf x11-preview
+missing:
+	@$(PYTHON3) -c 'import generate; generate.find_missing()'
+
+.PHONY: svg png jpeg pdf x11-preview missing
